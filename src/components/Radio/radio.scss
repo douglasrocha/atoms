@@ -1,0 +1,35 @@
+.at-radio {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.at-radio > .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #bbb;
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+}
+
+.at-radio > .box > .tick {
+    display: none;
+    background-color: #444;
+    width: 12px;
+    height: 12px;
+    border-radius: 100px;
+}
+
+.at-radio.is-checked > .box > .tick {
+    display: block;
+}
+
+.at-radio > .label {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.at-radio.is-dark-mode {
+}

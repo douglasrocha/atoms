@@ -1,0 +1,33 @@
+.at-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.at-checkbox > .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #bbb;
+    width: 20px;
+    height: 20px;
+}
+
+.at-checkbox > .box > .tick {
+    display: none;
+    background-color: #444;
+    width: 12px;
+    height: 12px;
+}
+
+.at-checkbox.is-checked > .box > .tick {
+    display: block;
+}
+
+.at-checkbox > .label {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.at-checkbox.is-dark-mode {
+}
