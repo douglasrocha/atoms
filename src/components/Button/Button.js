@@ -1,5 +1,5 @@
 import React from 'react';
-import { getClassName } from '../utils/ComponentUtils';
+import { getClassName, getBaseStyle } from '../../utils/ComponentUtils';
 import './button.scss';
 
 export default (props) => {
@@ -11,6 +11,7 @@ export default (props) => {
     return (
         <button
           className={ getClassName('at-button', className, darkMode) }
+          style={ getBaseStyle()}
           onClick={ props.onClick }>
           {props.label}
         </button>

@@ -15,3 +15,13 @@ export const DefaultButton = () =>
 DefaultButton.story = {
     name: 'Default Button'
 };
+
+export const DefaultDarkButton = () =>
+    <Button
+      darkMode={ true }
+      onClick={ action("Clicked") }
+      label="Olá" />;
+
+DefaultButton.story = {
+    name: 'Default Button (Dark Mode)'
+};

@@ -1,0 +1,26 @@
+.at-button {
+    padding: 10px 20px;
+    outline: 0;
+    border: 0;
+    background-color: var(--primary);
+}
+
+.at-button:hover {
+    background-color: var(--primary);
+}
+
+.at-button:active {
+    background-color: var(--primary);
+}
+
+.at-button.is-dark-mode {
+    background-color: var(--dark-primary);
+}
+
+.at-button.is-dark-mode:hover {
+    background-color: var(--dark-primary);
+}
+
+.at-button.is-dark-mode:active {
+    background-color: var(--dark-primary);
+}
