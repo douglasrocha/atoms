@@ -19,13 +19,19 @@
     "url": "https://github.com/douglasrocha/atoms/issues"
   },
   "homepage": "https://github.com/douglasrocha/atoms#readme",
-  "dependencies": {},
+  "dependencies": {
+    "node-sass": "^4.14.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-links": "^5.3.18",
     "@storybook/addons": "^5.3.18",
+    "@storybook/preset-scss": "^1.0.2",
     "@storybook/react": "^5.3.18",
-    "babel-loader": "^8.1.0"
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.3",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1"
   }
 }
