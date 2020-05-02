@@ -1,11 +1,39 @@
 export default {
+    '--weakest-primary': 'rgba(55, 55, 255, 1)',
+    '--weak-primary': 'rgba(55, 55, 255, 1)',
     '--primary': 'rgba(55, 55, 255, 1)',
+    '--strong-primary': 'rgba(55, 55, 255, 1)',
+    '--strongest-primary': 'rgba(55, 55, 255, 1)',
+    
+    '--weakest-secondary': 'rgba(55, 55, 255, 1)',
+    '--weak-secondary': 'rgba(55, 55, 255, 1)',
     '--secondary': 'rgba(55, 55, 255, 1)',
-    '--tertiary': 'rgba(55, 55, 255, 1)',
+    '--strong-secondary': 'rgba(55, 55, 255, 1)',
+    '--strongest-secondary': 'rgba(55, 55, 255, 1)',
 
+    '--weakest-tertiary': 'rgba(55, 55, 255, 1)',
+    '--weak-tertiary': 'rgba(55, 55, 255, 1)',
+    '--tertiary': 'rgba(55, 55, 255, 1)',
+    '--strong-tertiary': 'rgba(55, 55, 255, 1)',
+    '--strongest-tertiary': 'rgba(55, 55, 255, 1)',
+    
+    '--dark-weakest-primary': 'rgba(55, 255, 55, 1)',
+    '--dark-weak-primary': 'rgba(55, 255, 55, 1)',
     '--dark-primary': 'rgba(55, 255, 55, 1)',
+    '--dark-strong-primary': 'rgba(55, 255, 55, 1)',
+    '--dark-strongest-primary': 'rgba(55, 255, 55, 1)',
+
+    '--dark-weakest-secondary': 'rgba(55, 255, 55, 1)',
+    '--dark-weak-secondary': 'rgba(55, 255, 55, 1)',
     '--dark-secondary': 'rgba(55, 255, 55, 1)',
+    '--dark-strong-secondary': 'rgba(55, 255, 55, 1)',
+    '--dark-strongest-secondary': 'rgba(55, 255, 55, 1)',
+
+    '--dark-weakest-tertiary': 'rgba(55, 255, 55, 1)',
+    '--dark-weak-tertiary': 'rgba(55, 255, 55, 1)',
     '--dark-tertiary': 'rgba(55, 255, 55, 1)',
+    '--dark-strong-tertiary': 'rgba(55, 255, 55, 1)',
+    '--dark-strongest-tertiary': 'rgba(55, 255, 55, 1)',
 
     '--outline': 'rgba(0, 255, 255, 1)',
     '--dark-outline': 'rgba(0, 255, 255, 1)',
