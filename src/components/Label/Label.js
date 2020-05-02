@@ -4,18 +4,18 @@ import {
     getClassName,
     getBaseStyle
 } from '../../utils/ComponentUtils';
-import './button.scss';
+import './label.scss';
 
 export default (props) => {
-    const { className, darkMode, label, style } = props;
+    const { children, className, darkMode, style } = props;
     const events = extractEvents(props);
 
     return (
-        <button
-          className={ getClassName('at-button', className, darkMode) }
+        <label
+          className={ getClassName('at-label', className, darkMode) }
           style={ getBaseStyle(style) }
           { ...events }>
-          { label }
-        </button>
+          { children }
+        </label>
     );
 }

@@ -13,7 +13,7 @@ const defaultButton = (darkMode) =>
         onClick={ action("Click") }
         onDoubleClick={ action("Double Click") }
         onMouseOver={ action("Mouse Over") }
-        label="Olá" />;
+        label="Click me!" />;
 
 export const DefaultButton = () => defaultButton(false);
 export const DefaultDarkButton = () => defaultButton(true);

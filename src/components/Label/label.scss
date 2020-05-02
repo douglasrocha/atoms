@@ -1,0 +1,7 @@
+.at-label {
+    color: black;
+}
+
+.at-label.is-dark-mode {
+    color: var(--primary);
+}
