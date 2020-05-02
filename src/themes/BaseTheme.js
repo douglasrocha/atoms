@@ -10,6 +10,12 @@ export default {
     '--outline': 'rgba(0, 255, 255, 1)',
     '--dark-outline': 'rgba(0, 255, 255, 1)',
 
+    '--background': 'white',
+    '--dark-background': '#333',
+
+    '--text': '#000',
+    '--dark-text': '#fff',
+    
     '--gray1': '#000',
     '--gray2': '#000',
     '--gray3': '#000',
