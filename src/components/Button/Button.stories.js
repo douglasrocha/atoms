@@ -7,21 +7,17 @@ export default {
     Component: Button
 };
 
-export const DefaultButton = () =>
-    <Button
-      onClick={ action("Clicked") }
-      label="Olá" />;
+const defaultButton = (darkMode) =>
+      <Button
+        darkMode={ darkMode }
+        onClick={ action("Click") }
+        onDoubleClick={ action("Double Click") }
+        onMouseOver={ action("Mouse Over") }
+        label="Olá" />;
 
-DefaultButton.story = {
-    name: 'Default Button'
-};
+export const DefaultButton = () => defaultButton(false);
+export const DefaultDarkButton = () => defaultButton(true);
 
-export const DefaultDarkButton = () =>
-    <Button
-      darkMode={ true }
-      onClick={ action("Clicked") }
-      label="Olá" />;
-
-DefaultButton.story = {
+DefaultDarkButton.story = {
     name: 'Default Button (Dark Mode)'
 };

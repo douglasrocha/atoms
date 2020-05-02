@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/douglasrocha/atoms#readme",
   "dependencies": {
+    "lodash": "^4.17.15",
     "node-sass": "^4.14.0"
   },
   "devDependencies": {
