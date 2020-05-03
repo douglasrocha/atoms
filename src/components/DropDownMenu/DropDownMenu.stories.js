@@ -23,7 +23,7 @@ const defaultDropDownMenu = (darkMode) =>
         darkMode={ darkMode }
         onDoubleClick={ action("Double Click") }
         onMouseOver={ action("Mouse Over") }
-        children="This is a DropDownMenu!">
+        label="My DropDownMenu">
         <ManyItems />
       </DropDownMenu>;
 

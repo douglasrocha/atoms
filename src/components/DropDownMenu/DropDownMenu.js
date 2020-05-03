@@ -13,6 +13,7 @@ export default function (props) {
     const [ isOpen, setIsOpen ] = useState(false);
     const defaultClickEvent = (e) => {
         e.preventDefault();
+        e.stopPropagation();
         setIsOpen(!isOpen);
     };
     
@@ -32,7 +33,7 @@ export default function (props) {
           style={ getBaseStyle(style) }
           { ...events }>
           <Label className="label">
-            My Drop Down Menu
+            { label }
           </Label>
           <div className="items">
             { children }
