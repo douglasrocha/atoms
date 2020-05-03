@@ -58,5 +58,9 @@ export default {
     '--gray4': '#000',
     '--gray5': '#000',
     '--gray6': '#000',
-    '--gray7': '#000'
+    '--gray7': '#000',
+
+    '--padding': '10px 20px',
+    '--vertical-padding': '10px',
+    '--horizontal-padding': '20px'
 };

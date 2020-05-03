@@ -1,0 +1,12 @@
+@import './constants';
+
+.at-dropdownmenuitem {
+    display: flex;
+    align-items: center;
+    padding: 0 var(--horizontal-padding);
+    background-color: rgba(0, 0, 0, .6);
+    min-height: $item-height;
+    height: $item-height;
+    width: calc(100% - 40px);
+    color: white;
+}

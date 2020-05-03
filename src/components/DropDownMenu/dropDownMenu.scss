@@ -1,0 +1,36 @@
+@import './constants';
+
+.at-dropdownmenu {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: rgba(0, 0, 0, .6);
+    height: $item-height;
+    padding: 0 var(--horizontal-padding);
+    user-select: none;
+    cursor: pointer;
+}
+
+.at-dropdownmenu > .label {
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.at-dropdownmenu > .items {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    top: $item-height;
+    left: 0;
+    overflow-y: auto;
+    max-height: $items-view-size;
+}
+
+.at-dropdownmenu.is-open > .items {
+    display: flex;
+}
+
+.at-dropdownmenu.is-dark-mode {
+}
