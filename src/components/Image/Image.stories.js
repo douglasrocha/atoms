@@ -9,10 +9,11 @@ export default {
 
 export const DefaultImage = () =>
     <Image
-        onClick={ action("Click") }
-        onDoubleClick={ action("Double Click") }
-        onMouseOver={ action("Mouse Over") }
-        src="https://placekitten.com/300/300" />;
+      onClick={ action("Click") }
+      onDoubleClick={ action("Double Click") }
+      onMouseOver={ action("Mouse Over") }
+      tooltip="Hey there my friend. I'm testing"
+      src="https://placekitten.com/300/300" />;
 
 export const Filters = () => (
     <div>
@@ -20,14 +21,14 @@ export const Filters = () => (
         onClick={ action("Click") }
         onDoubleClick={ action("Double Click") }
         onMouseOver={ action("Mouse Over") }
-        src="https://placekitten.com/300/300" />;
-      
+        src="https://placekitten.com/300/300" />
+     
       <Image
         onClick={ action("Click") }
         onDoubleClick={ action("Double Click") }
         onMouseOver={ action("Mouse Over") }
         filter="b&w"
-        src="https://placekitten.com/300/300" />;
+        src="https://placekitten.com/300/300" />
 
       <Image
         onClick={ action("Click") }
@@ -40,7 +41,7 @@ export const Filters = () => (
         onClick={ action("Click") }
         onDoubleClick={ action("Double Click") }
         onMouseOver={ action("Mouse Over") }
-        filter="blgur"
+        filter="blur"
         src="https://placekitten.com/300/300" />
     </div>
 );

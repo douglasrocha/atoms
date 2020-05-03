@@ -1,0 +1,23 @@
+.at-link {
+    color: var(--link);
+}
+
+.at-link:hover {
+    color: var(--link-hover);
+}
+
+.at-link:active {
+    color: var(--link-active);
+}
+
+.at-link.is-dark-mode {
+    color: var(--dark-link);
+}
+
+.at-link.is-dark-mode:is-hover {
+    color: var(--dark-link-hover);
+}
+
+.at-link.is-dark-mode:is-active {
+    color: var(--dark-link-active);
+}

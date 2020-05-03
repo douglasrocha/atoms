@@ -15,7 +15,7 @@ const getFilterClass = (filter) => {
 };
 
 export default (props) => {
-    const { children, className, filter, src, style } = props;
+    const { children, className, filter, src, style, tooltip } = props;
     const events = extractEvents(props);
     const baseClass = getClassName('at-image', className);
     const filterClass = getFilterClass(filter);
@@ -25,6 +25,8 @@ export default (props) => {
           className={ `${baseClass}${filterClass}` }
           style={ getBaseStyle(style) }
           src={ src }
+          alt={ tooltip } 
+          data-tooltip={ tooltip }
           { ...events } />
     );
 }

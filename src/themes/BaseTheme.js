@@ -43,6 +43,14 @@ export default {
 
     '--text': '#000',
     '--dark-text': '#fff',
+
+    '--link': '#0000ff',
+    '--link-hover': '#0000ee',
+    '--link-active': '#0000cc',
+
+    '--dark-link': '#00ff00',
+    '--dark-link-hover': '#00ee00',
+    '--dark-link-active': '#00cc00',
     
     '--gray1': '#000',
     '--gray2': '#000',
