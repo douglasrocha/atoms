@@ -1,0 +1,11 @@
+.at-image.is-sepia {
+    filter: sepia(1);
+}
+
+.at-image.is-bw {
+    filter: grayscale(1);
+}
+
+.at-image.is-blurred {
+    filter: blur(5px);
+}
