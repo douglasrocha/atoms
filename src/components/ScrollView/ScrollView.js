@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     extractEvents,
     getClassName,
@@ -6,62 +6,74 @@ import {
 } from '../../utils/ComponentUtils';
 import './scrollView.scss';
 
-const ScrollBar = () => (
-    <div className="scroll">
-      <div className="bar" />
-    </div>
-);
-
-const ScrollBars = () => (
-    <React.Fragment>
-      <ScrollBar />
-      <ScrollBar />
-    </React.Fragment>
-);
-
-const Content = (props) => {
-    const { children, maxHeight, maxWidth, style } = props;
-    const inputStyle = style || {};
-    const componentStyle = Object.assign(inputStyle, {
-        maxHeight: `calc(${maxHeight} - 8px)`,
-        maxWidth: `calc(${maxWidth} - 8px)`
-    });
-
-    console.log(componentStyle);
-    
+const VerticalScrollBar = (props) => {
+    const { offset } = props;
     return (
-        <div
-          className="content"
-          style={{ ...componentStyle  }}>
-          { children }
-        </div>
+	<div className="scroll vertical">
+	    <div className="bar" />
+	</div>
     );
-};
+}
+
+const HorizontalScrollBar = (props) => {
+    const { offset } = props;
+    return (
+	<div className="scroll horizontal">
+	    <div className="bar" />
+	</div>
+    );
+}
 
 export default (props) => {
     const {
         children,
         className,
-        contentStyle,
         darkMode,
         maxHeight,
         maxWidth,
         style
     } = props;
+
+    const scrollViewRef = React.createRef();
     const events = extractEvents(props);
+    const [ verticalOffset, setVerticalOffset ] = useState(0);
+    const [ horizontalOffset, setHorizontalOffset ] = useState(0);
+    const [ maxVerticalOffset, setMaxVerticalOffset ] = useState(0);
+    const [ maxHorizontalOffset, setMaxHorizontalOffset ] = useState(0);
+
+    
+    const handleScroll = () => {
+	const scrollY = window.scrollY;
+	const scrollX = window.scrollX;
+	const scrollTop = scrollViewRef.current.scrollTop;
+	const scrollLeft = scrollViewRef.current.scrollLeft;
+	const maxOffsetTop = scrollViewRef.current.scrollTopMax;
+	const maxOffsetLeft = scrollViewRef.current.scrollLeftMax;
+	setVerticalOffset(scrollTop);
+	setHorizontalOffset(scrollLeft);
+	setMaxVerticalOffset(maxOffsetTop);
+	setMaxHorizontalOffset(maxOffsetLeft);
+    };
 
     return (
         <div
-          className={ getClassName('at-scrollview', className, darkMode) }
-          style={ getBaseStyle(style) }
-          { ...events }>
-          <Content
-            maxHeight={ maxHeight }
-            maxWidth={ maxWidth }
-            style={ contentStyle }>
-            { children }
-          </Content>
-          <ScrollBars />
+	    ref={ scrollViewRef }
+            className={ getClassName('at-scrollview', className, darkMode) }
+	    style={{ maxHeight, maxWidth }}
+	    onScroll={ handleScroll }
+            { ...events }>
+
+	    <div className="content">
+		{ children }
+	    </div>
+	    
+	    <VerticalScrollBar
+		maxOffset={ maxVerticalOffset }
+		offset={ verticalOffset } />
+	    
+	    <HorizontalScrollBar
+		maxOffset={ maxHorizontalOffset }
+		offset={ horizontalOffset } />
         </div>
     );
 }

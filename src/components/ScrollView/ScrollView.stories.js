@@ -13,19 +13,22 @@ const defaultScrollView = (darkMode) =>
         onClick={ action("Click") }
         onDoubleClick={ action("Double Click") }
         onMouseOver={ action("Mouse Over") }
-<<<<<<< HEAD
-        maxHeight="100vh"
-        maxWidth="100%">
+        maxHeight="600px"
+        maxWidth="90%">
         <div style={{
-            height: '2500px',
-=======
-        maxHeight="500px"
-        maxWidth="100%">
-        <div style={{
-            height: '1000px',
->>>>>>> Added ScrollView without events
-            width: '500px',
+            height: '500px',
+            width: '1500px',
             backgroundColor: 'green'
+             }}/>
+	  <div style={{
+            height: '500px',
+            width: '3000px',
+            backgroundColor: 'blue'
+               }}/>
+	  <div style={{
+            height: '500px',
+            width: '2500px',
+            backgroundColor: 'yellow'
         }}/>
       </ScrollView>;
 
