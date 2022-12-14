@@ -4,7 +4,7 @@ import {
     getClassName,
     getBaseStyle
 } from '../../utils/ComponentUtils';
-import './scrollView.scss';
+import './scrollView.css';
 
 const VerticalScrollBar = (props) => {
     const { offset } = props;

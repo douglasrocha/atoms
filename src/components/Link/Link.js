@@ -6,7 +6,7 @@ import {
     getClassName,
     getBaseStyle
 } from '../../utils/ComponentUtils';
-import './link.scss';
+import './link.css';
 
 export default (props) => {
     const { children, className, darkMode, style, target, to } = props;

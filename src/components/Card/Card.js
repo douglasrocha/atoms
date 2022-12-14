@@ -4,7 +4,7 @@ import {
     getClassName,
     getBaseStyle
 } from '../../utils/ComponentUtils';
-import './card.scss';
+import './card.css';
 
 export default (props) => {
     const { children, className, darkMode, style } = props;

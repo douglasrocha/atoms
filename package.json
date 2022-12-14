@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "repository": {
@@ -20,20 +20,29 @@
   },
   "homepage": "https://github.com/douglasrocha/atoms#readme",
   "dependencies": {
-    "lodash": "^4.17.15",
-    "node-sass": "^4.14.0",
-    "react-router-dom": "^5.1.2"
+    "lodash": "^4.17.21",
+    "react-router-dom": "^6.4.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.6",
-    "@storybook/addon-actions": "^5.3.18",
-    "@storybook/addon-links": "^5.3.18",
-    "@storybook/addons": "^5.3.18",
-    "@storybook/preset-scss": "^1.0.2",
-    "@storybook/react": "^5.3.18",
-    "babel-loader": "^8.1.0",
-    "css-loader": "^3.5.3",
-    "sass-loader": "^8.0.2",
-    "style-loader": "^1.2.1"
+    "@babel/core": "^7.20.5",
+    "@storybook/addon-actions": "^6.5.14",
+    "@storybook/addon-links": "^6.5.14",
+    "@storybook/addons": "^6.5.14",
+    "@storybook/preset-create-react-app": "^1.2.0",
+    "@storybook/react": "^6.1.21",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.2.4",
+    "@types/node": "^18.11.15",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.9",
+    "babel-loader": "^9.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "typescript": "^4.9.4",
+    "web-vitals": "^3.1.0"
   }
 }

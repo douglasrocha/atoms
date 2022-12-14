@@ -5,7 +5,7 @@ import {
     getClassName,
     getBaseStyle
 } from '../../utils/ComponentUtils';
-import './radio.scss';
+import './radio.css';
 
 const TickBox = () =>
       <div className="box">

@@ -5,7 +5,7 @@ import {
     getClassName,
     getBaseStyle
 } from '../../utils/ComponentUtils';
-import './dropDownMenu.scss';
+import './dropDownMenu.css';
 
 export default function (props) {
     const { children, className, darkMode, label, open, style } = props;

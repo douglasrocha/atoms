@@ -1,11 +1,9 @@
-@import './constants';
-
 .at-dropdownmenu {
     display: flex;
     align-items: center;
     position: relative;
     background-color: rgba(0, 0, 0, .6);
-    height: $item-height;
+    height: 40px;
     padding: 0 var(--horizontal-padding);
     user-select: none;
     cursor: pointer;
@@ -22,10 +20,10 @@
     position: absolute;
     flex-direction: column;
     width: 100%;
-    top: $item-height;
+    top: 40px;
     left: 0;
     overflow-y: auto;
-    max-height: $items-view-size;
+    max-height: 240px;
 }
 
 .at-dropdownmenu.is-open > .items {

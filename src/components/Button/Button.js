@@ -4,7 +4,7 @@ import {
     getClassName,
     getBaseStyle
 } from '../../utils/ComponentUtils';
-import './button.scss';
+import './button.css';
 
 export default (props) => {
     const { className, darkMode, label, style } = props;

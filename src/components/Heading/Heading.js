@@ -4,7 +4,7 @@ import {
     getClassName,
     getBaseStyle
 } from '../../utils/ComponentUtils';
-import './heading.scss';
+import './heading.css';
 
 export default (props) => {
     const { children, className, darkMode, style, w } = props;

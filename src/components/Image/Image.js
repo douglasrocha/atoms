@@ -4,7 +4,7 @@ import {
     getClassName,
     getBaseStyle
 } from '../../utils/ComponentUtils';
-import './image.scss';
+import './image.css';
 
 const getFilterClass = (filter) => {
     return {

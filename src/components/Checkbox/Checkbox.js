@@ -5,7 +5,7 @@ import {
     getClassName,
     getBaseStyle
 } from '../../utils/ComponentUtils';
-import './checkbox.scss';
+import './checkbox.css';
 
 const TickBox = () =>
       <div className="box">
