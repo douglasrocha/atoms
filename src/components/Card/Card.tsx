@@ -1,4 +1,5 @@
-import React from 'react';
+import * as React from 'react';
+import { SyntheticEventsProps } from '../../base/SyntheticEventsBase';
 import {
     extractEvents,
     getClassName,
@@ -6,7 +7,14 @@ import {
 } from '../../utils/ComponentUtils';
 import './card.css';
 
-export default (props) => {
+export interface CardProps extends SyntheticEventsProps {
+    children?: React.ReactElement[],
+    className? : string,
+    darkMode?: boolean,
+    style?: React.CSSProperties
+}
+
+export const Card = (props: CardProps) => {
     const { children, className, darkMode, style } = props;
     const events = extractEvents(props);
 

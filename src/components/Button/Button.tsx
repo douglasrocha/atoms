@@ -1,4 +1,5 @@
-import React from 'react';
+import * as React from 'react';
+import { SyntheticEventsProps } from '../../base/SyntheticEventsBase';
 import {
     extractEvents,
     getClassName,
@@ -6,7 +7,14 @@ import {
 } from '../../utils/ComponentUtils';
 import './button.css';
 
-export default (props) => {
+export interface ButtonProps extends SyntheticEventsProps {
+    className?: string,
+    darkMode?: boolean,
+    label?: string,
+    style?: React.CSSProperties,
+}
+
+export const Button = (props: ButtonProps) => {
     const { className, darkMode, label, style } = props;
     const events = extractEvents(props);
 

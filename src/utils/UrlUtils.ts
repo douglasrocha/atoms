@@ -1,7 +1,7 @@
-export const isExternal = (inputUrl) => {
+export const isExternal = (inputUrl: string) => {
     const host = window.location.hostname;
 
-    const linkHost = (url) => {
+    const linkHost = (url: string) => {
         if (/^https?:\/\//.test(url)) {
             const parser = document.createElement('a');
             parser.href = url;

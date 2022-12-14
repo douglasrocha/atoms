@@ -6,7 +6,7 @@ import {
 } from '../../utils/ComponentUtils';
 import './label.css';
 
-export default (props) => {
+export const Label = (props) => {
     const { children, className, darkMode, style } = props;
     const events = extractEvents(props);
 

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Base atomic design atoms",
   "main": "index.js",
+  "types": "./src/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
@@ -20,16 +21,19 @@
   },
   "homepage": "https://github.com/douglasrocha/atoms#readme",
   "dependencies": {
-    "lodash": "^4.17.21",
-    "react-router-dom": "^6.4.5"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.20.5",
     "@storybook/addon-actions": "^6.5.14",
     "@storybook/addon-links": "^6.5.14",
     "@storybook/addons": "^6.5.14",
     "@storybook/preset-create-react-app": "^1.2.0",
     "@storybook/react": "^6.1.21",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.5",
+    "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
@@ -40,10 +44,8 @@
     "babel-loader": "^9.1.0",
     "cross-env": "^7.0.3",
     "html-webpack-plugin": "^5.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
-    "typescript": "^4.9.4",
+    "tsconfig-paths-webpack-plugin": "^4.0.0",
     "web-vitals": "^3.1.0"
   }
 }
