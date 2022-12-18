@@ -23,13 +23,13 @@ Don't use it in production yet. It is in early development mode! There are still
 You can check the Issues section, and maybe you can help me with something :)
 
 The roadmap I have include:
-[X] Revive the code I started writing back in 2020
-[X] Migrate it to Typescript
-[] Add all base components with almost no attributes
-[] Create unit tests for all of them using Jest
-[] Create one base style for all components
-[] Add attributes to all components
-[] Define standard parameters to make components intuitive
-[] Create a few common themes (ex: Material Design) to bring interest
-[] Talk about it openly in the developer community
+- [X] Revive the code I started writing back in 2020
+- [X] Migrate it to Typescript
+- [] Add all base components with almost no attributes
+- [] Create unit tests for all of them using Jest
+- [] Create one base style for all components
+- [] Add attributes to all components
+- [] Define standard parameters to make components intuitive
+- [] Create a few common themes (ex: Material Design) to bring interest
+- [] Talk about it openly in the developer community
 
