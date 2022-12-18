@@ -4,7 +4,7 @@ import {
     extractEvents,
     getClassName,
     getBaseStyle
-} from '../../utils/ComponentUtils';
+} from '../../services/ComponentService';
 import './heading.css';
 
 export type HeadingWeight = 1|2|3|4|5|6;

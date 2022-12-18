@@ -4,7 +4,7 @@ import {
     extractEvents,
     getClassName,
     getBaseStyle
-} from '../../utils/ComponentUtils';
+} from '../../services/ComponentService';
 import './image.css';
 
 export type ImageFilterType = 'Sepia'|'BlackAndWhite'|'Blur';

@@ -4,7 +4,7 @@ import {
     extractEvents,
     getClassName,
     getBaseStyle
-} from '../../utils/ComponentUtils';
+} from '../../services/ComponentService';
 import './label.css';
 
 export interface LabelProps extends BaseProps {

@@ -5,7 +5,7 @@ import {
     extractEvents,
     getClassName,
     getBaseStyle
-} from '../../utils/ComponentUtils';
+} from '../../services/ComponentService';
 import './scrollView.css';
 
 export interface ScrollViewProps extends BaseProps {

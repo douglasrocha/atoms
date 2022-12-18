@@ -5,7 +5,7 @@ import {
     extractEvents,
     getClassName,
     getBaseStyle
-} from '../../utils/ComponentUtils';
+} from '../../services/ComponentService';
 import './dropDownMenu.css';
 import { BaseProps } from '../../base/BaseProps';
 

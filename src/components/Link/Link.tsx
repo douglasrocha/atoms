@@ -1,11 +1,11 @@
 import * as React from 'react';
 import * as Router from 'react-router-dom';
-import { isExternal } from '../../utils/UrlUtils';
+import { isExternal } from '../../services/UrlUtils';
 import {
     extractEvents,
     getClassName,
     getBaseStyle
-} from '../../utils/ComponentUtils';
+} from '../../services/ComponentService';
 import './link.css';
 import { BaseProps } from '../../base/BaseProps';
 
