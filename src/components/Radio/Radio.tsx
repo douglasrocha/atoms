@@ -1,18 +1,19 @@
-import React from 'react';
-import Label from '../Label/Label';
+import * as React from 'react';
+import { Label } from '../Label/Label';
 import {
     extractEvents,
     getClassName,
     getBaseStyle
 } from '../../utils/ComponentUtils';
 import './radio.css';
+import { BaseProps } from '../../base/BaseProps';
 
-const TickBox = () =>
-      <div className="box">
-        <div className="tick" />
-      </div>;
+export interface RadioProps extends BaseProps {
+  checked?: boolean,
+  label?: React.ReactElement | string
+}
 
-export default (props) => {
+export const Radio =  (props: RadioProps) => {
     const { checked, className, darkMode, label, style } = props;
     const events = extractEvents(props);
     const baseClass = getClassName('at-radio', className, darkMode);
@@ -20,15 +21,19 @@ export default (props) => {
     
     return (
         <div
-          checked={ checked }
           className={ `${baseClass}${checkedClass}` }
           style={ getBaseStyle(style) }
           { ...events }>
 
           <TickBox />
-          <Label className="label">
-            { label }
-          </Label>
+          <Label 
+            className="label" 
+            label={ label } />
         </div>
     );
 }
+
+const TickBox = () =>
+  <div className="box">
+    <div className="tick" />
+  </div>;

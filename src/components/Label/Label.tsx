@@ -8,7 +8,7 @@ import {
 import './label.css';
 
 export interface LabelProps extends BaseProps {
-    label: React.ReactElement | string
+    label?: React.ReactElement | string
 }
 
 export const Label = (props: LabelProps) => {

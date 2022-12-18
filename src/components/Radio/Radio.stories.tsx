@@ -1,5 +1,5 @@
-import React from 'react';
-import Radio from './Radio';
+import * as React from 'react';
+import { Radio } from './Radio';
 import { action }from '@storybook/addon-actions';
 
 export default {
@@ -7,7 +7,8 @@ export default {
     Component: Radio
 };
 
-const defaultRadio = (checked, darkMode, optionNumber) =>
+const defaultRadio = 
+  (checked: boolean, darkMode: boolean, optionNumber: number) =>
       <Radio
         style={{ margin: "10px 0" }}
         checked={ checked }
@@ -17,7 +18,7 @@ const defaultRadio = (checked, darkMode, optionNumber) =>
         onMouseOver={ action("Mouse Over") }
         label={ `Option ${optionNumber}` } />;
 
-const someDefaultRadios = (darkMode) =>
+const someDefaultRadios = (darkMode: boolean) =>
       <div>
         { defaultRadio(false, darkMode, 1) }
         { defaultRadio(true, darkMode, 2) }
