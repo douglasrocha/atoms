@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import Link from './Link';
+import { Link } from './Link';
 import { action }from '@storybook/addon-actions';
 
 export default {
@@ -8,7 +8,7 @@ export default {
     Component: Link
 };
 
-const defaultLink = (darkMode, to) => (
+const defaultLink = (darkMode: boolean, to: string) => (
     <BrowserRouter>
       <Link
         darkMode={ darkMode }
