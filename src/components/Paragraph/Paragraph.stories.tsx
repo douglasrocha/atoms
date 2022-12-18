@@ -1,5 +1,5 @@
-import React from 'react';
-import Paragraph from './Paragraph';
+import * as React from 'react';
+import { Paragraph } from './Paragraph';
 import { action }from '@storybook/addon-actions';
 
 export default {
@@ -7,7 +7,7 @@ export default {
     Component: Paragraph
 };
 
-const defaultParagraph = (darkMode) =>
+const defaultParagraph = (darkMode: boolean) =>
       <Paragraph
         darkMode={ darkMode }
         onClick={ action("Click") }

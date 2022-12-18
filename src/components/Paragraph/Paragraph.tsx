@@ -1,4 +1,5 @@
-import React from 'react';
+import * as React from 'react';
+import { BaseProps } from '../../base/BaseProps';
 import {
     extractEvents,
     getClassName,
@@ -6,7 +7,11 @@ import {
 } from '../../utils/ComponentUtils';
 import './paragraph.css';
 
-export default (props) => {
+export interface ParagraphProps extends BaseProps {
+    children?: React.ReactElement | string
+}
+
+export const Paragraph = (props: ParagraphProps) => {
     const { children, className, darkMode, style } = props;
     const events = extractEvents(props);
 
