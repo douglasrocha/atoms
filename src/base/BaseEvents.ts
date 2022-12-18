@@ -6,7 +6,7 @@ export const allEvents: string[] = [
   'onBlur',
   'onCanPlay',
   'onCanPlayThrough',
-  'onChange', 
+  'onChange',
   'onClick',
   'onCompositionEnd',
   'onCompositionStart',

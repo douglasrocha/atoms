@@ -7,7 +7,7 @@ export const isExternal = (inputUrl: string) => {
       parser.href = url;
       return parser.hostname;
     }
-        
+
     return window.location.hostname;
   };
 

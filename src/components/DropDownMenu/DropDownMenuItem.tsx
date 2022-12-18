@@ -3,17 +3,17 @@ import { BaseProps } from '../../base/BaseProps';
 import {
   extractEvents,
   getClassName,
-  getBaseStyle
+  getBaseStyle,
 } from '../../services/ComponentService';
 import { Label } from '../Label/Label';
 import './dropDownMenuItem.css';
 
 export interface DropDownMenuItemProps extends BaseProps {
-  className?: string
-  darkMode?: boolean
-  label?: string
-  labelClassName?: string
-  style?: React.CSSProperties
+  className?: string;
+  darkMode?: boolean;
+  label?: string;
+  labelClassName?: string;
+  style?: React.CSSProperties;
 }
 
 export const DropDownMenuItem = (props: DropDownMenuItemProps) => {
@@ -28,20 +28,21 @@ export const DropDownMenuItem = (props: DropDownMenuItemProps) => {
   };
 
   const extractedEvents = extractEvents(props);
-  const events = Object.assign({}, {
-    ...extractedEvents,
-    onClick: onClickWrapper
-  });
+  const events = Object.assign(
+    {},
+    {
+      ...extractedEvents,
+      onClick: onClickWrapper,
+    }
+  );
 
   return (
     <span
-      className={ getClassName('at-dropdownmenuitem', className, darkMode) }
-      style={ getBaseStyle(style) }
-      { ...events }>
-      <Label
-        className={ labelClassName }
-        darkMode={ darkMode }
-        label={ label } />
+      className={getClassName('at-dropdownmenuitem', className, darkMode)}
+      style={getBaseStyle(style)}
+      {...events}
+    >
+      <Label className={labelClassName} darkMode={darkMode} label={label} />
     </span>
   );
 };

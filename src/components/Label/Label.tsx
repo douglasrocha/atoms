@@ -3,12 +3,12 @@ import { BaseProps } from '../../base/BaseProps';
 import {
   extractEvents,
   getClassName,
-  getBaseStyle
+  getBaseStyle,
 } from '../../services/ComponentService';
 import './label.css';
 
 export interface LabelProps extends BaseProps {
-  label?: React.ReactElement | string
+  label?: React.ReactElement | string;
 }
 
 export const Label = (props: LabelProps) => {
@@ -17,10 +17,11 @@ export const Label = (props: LabelProps) => {
 
   return (
     <label
-      className={ getClassName('at-label', className, darkMode) }
-      style={ getBaseStyle(style) }
-      { ...events }>
-      { label }
+      className={getClassName('at-label', className, darkMode)}
+      style={getBaseStyle(style)}
+      {...events}
+    >
+      {label}
     </label>
   );
 };

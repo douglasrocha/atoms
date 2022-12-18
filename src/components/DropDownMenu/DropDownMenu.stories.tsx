@@ -9,37 +9,39 @@ export default {
   argTypes: {
     onClick: { action: 'click' },
     onDoubleClick: { action: 'doubleclick' },
-    onMouseOver: { action: 'mouse over' }
+    onMouseOver: { action: 'mouse over' },
   },
   parameters: {
     actions: {
-      handles: ['mouseover', 'click']
-    }
-  }
+      handles: ['mouseover', 'click'],
+    },
+  },
 };
 
-const dropDownMenuItem = (idx: number) =>
-  <DropDownMenuItem
-    key={ idx }
-    label={ `Item ${idx}` }/>;
+const dropDownMenuItem = (idx: number) => (
+  <DropDownMenuItem key={idx} label={`Item ${idx}`} />
+);
 
-const ManyItems = () =>
+const ManyItems = () => (
   <React.Fragment>
-    { [...Array(20).keys()].map(idx => dropDownMenuItem(idx)) }
-  </React.Fragment>;
+    {[...Array(20).keys()].map((idx) => dropDownMenuItem(idx))}
+  </React.Fragment>
+);
 
-const defaultDropDownMenu = (darkMode: boolean) =>
+const defaultDropDownMenu = (darkMode: boolean) => (
   <DropDownMenu
-    darkMode={ darkMode }
-    onDoubleClick={ action('Double Click') }
-    onMouseOver={ action('Mouse Over') }
-    label="My DropDownMenu">
+    darkMode={darkMode}
+    onDoubleClick={action('Double Click')}
+    onMouseOver={action('Mouse Over')}
+    label="My DropDownMenu"
+  >
     <ManyItems />
-  </DropDownMenu>;
+  </DropDownMenu>
+);
 
 export const DefaultDropDownMenu = () => defaultDropDownMenu(false);
 export const DefaultDarkDropDownMenu = () => defaultDropDownMenu(true);
 
 DefaultDarkDropDownMenu.story = {
-  name: 'Default DropDownMenu (Dark Mode)'
+  name: 'Default DropDownMenu (Dark Mode)',
 };

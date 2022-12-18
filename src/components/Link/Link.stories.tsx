@@ -5,19 +5,20 @@ import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'Link',
-  Component: Link
+  Component: Link,
 };
 
 const defaultLink = (darkMode: boolean, to: string) => (
   <BrowserRouter>
     <Link
-      darkMode={ darkMode }
-      onClick={ action('Click') }
-      onDoubleClick={ action('Double Click') }
-      onMouseOver={ action('Mouse Over') }
-      to={ to }
-      target="_BLANK">
-        This is a link!
+      darkMode={darkMode}
+      onClick={action('Click')}
+      onDoubleClick={action('Double Click')}
+      onMouseOver={action('Mouse Over')}
+      to={to}
+      target="_BLANK"
+    >
+      This is a link!
     </Link>
   </BrowserRouter>
 );
@@ -27,5 +28,5 @@ export const DefaultDarkLink = () => defaultLink(true, '#');
 export const ExternalLink = () => defaultLink(false, 'https://www.google.com');
 
 DefaultDarkLink.story = {
-  name: 'Default Link (Dark Mode)'
+  name: 'Default Link (Dark Mode)',
 };

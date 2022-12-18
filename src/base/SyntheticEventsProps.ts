@@ -1,84 +1,84 @@
 import * as React from 'react';
 
 export interface SyntheticEventsProps<T extends React.SyntheticEvent> {
-  onAbort? : React.AnimationEventHandler,
-  onAnimationStart? : React.AnimationEventHandler,
-  onAnimationEnd? : React.AnimationEventHandler,
-  onAnimationIteration? : React.AnimationEventHandler,
-  onBlur? : React.FocusEventHandler,
-  onCanPlay? : React.EventHandler<T>,
-  onCanPlayThrough? : React.EventHandler<T>,
-  onChange? : React.FormEventHandler,
-  onClick? : React.MouseEventHandler,
-  onCompositionEnd? : React.CompositionEventHandler,
-  onCompositionStart? : React.CompositionEventHandler,
-  onCompositionUpdate? : React.CompositionEventHandler,
-  onContextMenu? : React.MouseEventHandler,
-  onCopy? : React.ClipboardEventHandler,
-  onCut? : React.ClipboardEventHandler,
-  onDoubleClick? : React.EventHandler<T>,
-  onDrag? : React.EventHandler<T>,
-  onDragEnd? : React.MouseEventHandler,
-  onDragEnter? : React.MouseEventHandler,
-  onDragLeave? : React.MouseEventHandler,
-  onDragOver? : React.MouseEventHandler,
-  onDragStart? : React.MouseEventHandler,
-  onDrop? : React.MouseEventHandler,
-  onDurationChange? : React.EventHandler<T>,
-  onEmptied? : React.EventHandler<T>,
-  onEncrypted? : React.EventHandler<T>,
-  onEnded? : React.EventHandler<T>,
-  onError? : React.EventHandler<T>,
-  onFocus? : React.FocusEventHandler,
-  onGotPointerCapture? : React.EventHandler<T>,
-  onHover? : React.EventHandler<T>,
-  onInput? : React.FormEventHandler,
-  onInvalid? : React.FormEventHandler,
-  onLoad? : React.EventHandler<T>,
-  onLoadedData? : React.EventHandler<T>,
-  onLoadedMetadata? : React.EventHandler<T>,
-  onLoadStart? : React.EventHandler<T>,
-  onLostPointerCapture? : React.EventHandler<T>,
-  onKeyDown? : React.KeyboardEventHandler,
-  onKeyPress? : React.KeyboardEventHandler,
-  onKeyUp? : React.KeyboardEventHandler,
-  onMouseDown? : React.EventHandler<T>,
-  onMouseEnter? : React.MouseEventHandler,
-  onMouseLeave? : React.MouseEventHandler,
-  onMouseMove? : React.MouseEventHandler,
-  onMouseOut? : React.MouseEventHandler,
-  onMouseOver? : React.MouseEventHandler,
-  onMouseUp? : React.MouseEventHandler,
-  onPlay? : React.EventHandler<T>,
-  onPlaying? : React.EventHandler<T>,
-  onProgress? : React.EventHandler<T>,
-  onPaste? : React.ClipboardEventHandler,
-  onPause? : React.EventHandler<T>,
-  onPointerDown? : React.PointerEventHandler,
-  onPointerMove? : React.PointerEventHandler,
-  onPointerUp? : React.PointerEventHandler,
-  onPointerCancel? : React.PointerEventHandler,
-  onPointerEnter? : React.PointerEventHandler,
-  onPointerLeave? : React.PointerEventHandler,
-  onPointerOver? : React.PointerEventHandler,
-  onPointerOut? : React.PointerEventHandler,
-  onRateChange? : React.PointerEventHandler,
-  onReset? : React.FormEventHandler,
-  onScroll? : React.UIEventHandler,
-  onSeeked? : React.EventHandler<T>,
-  onSeeking? : React.EventHandler<T>,
-  onSelect? : React.EventHandler<T>,
-  onStalled? : React.EventHandler<T>,
-  onSubmit? : React.FormEventHandler,
-  onSuspend? : React.EventHandler<T>,
-  onTimeUpdate? : React.EventHandler<T>,
-  onToggle? : React.EventHandler<T>,
-  onTouchCancel? : React.TouchEventHandler,
-  onTouchEnd? : React.TouchEventHandler,
-  onTouchMove? : React.TouchEventHandler,
-  onTouchStart? : React.TouchEventHandler,
-  onTransitionEnd? : React.TransitionEventHandler,
-  onVolumeChange? : React.EventHandler<T>,
-  onWaiting? : React.EventHandler<T>,
-  onWheel? : React.WheelEventHandler,
-};
+  onAbort?: React.AnimationEventHandler;
+  onAnimationStart?: React.AnimationEventHandler;
+  onAnimationEnd?: React.AnimationEventHandler;
+  onAnimationIteration?: React.AnimationEventHandler;
+  onBlur?: React.FocusEventHandler;
+  onCanPlay?: React.EventHandler<T>;
+  onCanPlayThrough?: React.EventHandler<T>;
+  onChange?: React.FormEventHandler;
+  onClick?: React.MouseEventHandler;
+  onCompositionEnd?: React.CompositionEventHandler;
+  onCompositionStart?: React.CompositionEventHandler;
+  onCompositionUpdate?: React.CompositionEventHandler;
+  onContextMenu?: React.MouseEventHandler;
+  onCopy?: React.ClipboardEventHandler;
+  onCut?: React.ClipboardEventHandler;
+  onDoubleClick?: React.EventHandler<T>;
+  onDrag?: React.EventHandler<T>;
+  onDragEnd?: React.MouseEventHandler;
+  onDragEnter?: React.MouseEventHandler;
+  onDragLeave?: React.MouseEventHandler;
+  onDragOver?: React.MouseEventHandler;
+  onDragStart?: React.MouseEventHandler;
+  onDrop?: React.MouseEventHandler;
+  onDurationChange?: React.EventHandler<T>;
+  onEmptied?: React.EventHandler<T>;
+  onEncrypted?: React.EventHandler<T>;
+  onEnded?: React.EventHandler<T>;
+  onError?: React.EventHandler<T>;
+  onFocus?: React.FocusEventHandler;
+  onGotPointerCapture?: React.EventHandler<T>;
+  onHover?: React.EventHandler<T>;
+  onInput?: React.FormEventHandler;
+  onInvalid?: React.FormEventHandler;
+  onLoad?: React.EventHandler<T>;
+  onLoadedData?: React.EventHandler<T>;
+  onLoadedMetadata?: React.EventHandler<T>;
+  onLoadStart?: React.EventHandler<T>;
+  onLostPointerCapture?: React.EventHandler<T>;
+  onKeyDown?: React.KeyboardEventHandler;
+  onKeyPress?: React.KeyboardEventHandler;
+  onKeyUp?: React.KeyboardEventHandler;
+  onMouseDown?: React.EventHandler<T>;
+  onMouseEnter?: React.MouseEventHandler;
+  onMouseLeave?: React.MouseEventHandler;
+  onMouseMove?: React.MouseEventHandler;
+  onMouseOut?: React.MouseEventHandler;
+  onMouseOver?: React.MouseEventHandler;
+  onMouseUp?: React.MouseEventHandler;
+  onPlay?: React.EventHandler<T>;
+  onPlaying?: React.EventHandler<T>;
+  onProgress?: React.EventHandler<T>;
+  onPaste?: React.ClipboardEventHandler;
+  onPause?: React.EventHandler<T>;
+  onPointerDown?: React.PointerEventHandler;
+  onPointerMove?: React.PointerEventHandler;
+  onPointerUp?: React.PointerEventHandler;
+  onPointerCancel?: React.PointerEventHandler;
+  onPointerEnter?: React.PointerEventHandler;
+  onPointerLeave?: React.PointerEventHandler;
+  onPointerOver?: React.PointerEventHandler;
+  onPointerOut?: React.PointerEventHandler;
+  onRateChange?: React.PointerEventHandler;
+  onReset?: React.FormEventHandler;
+  onScroll?: React.UIEventHandler;
+  onSeeked?: React.EventHandler<T>;
+  onSeeking?: React.EventHandler<T>;
+  onSelect?: React.EventHandler<T>;
+  onStalled?: React.EventHandler<T>;
+  onSubmit?: React.FormEventHandler;
+  onSuspend?: React.EventHandler<T>;
+  onTimeUpdate?: React.EventHandler<T>;
+  onToggle?: React.EventHandler<T>;
+  onTouchCancel?: React.TouchEventHandler;
+  onTouchEnd?: React.TouchEventHandler;
+  onTouchMove?: React.TouchEventHandler;
+  onTouchStart?: React.TouchEventHandler;
+  onTransitionEnd?: React.TransitionEventHandler;
+  onVolumeChange?: React.EventHandler<T>;
+  onWaiting?: React.EventHandler<T>;
+  onWheel?: React.WheelEventHandler;
+}

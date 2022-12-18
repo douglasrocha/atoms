@@ -4,7 +4,7 @@ export default {
   '--primary': 'rgba(55, 55, 255, 1)',
   '--strong-primary': 'rgba(55, 55, 255, 1)',
   '--strongest-primary': 'rgba(55, 55, 255, 1)',
-    
+
   '--weakest-secondary': 'rgba(55, 55, 255, 1)',
   '--weak-secondary': 'rgba(55, 55, 255, 1)',
   '--secondary': 'rgba(55, 55, 255, 1)',
@@ -16,7 +16,7 @@ export default {
   '--tertiary': 'rgba(55, 55, 255, 1)',
   '--strong-tertiary': 'rgba(55, 55, 255, 1)',
   '--strongest-tertiary': 'rgba(55, 55, 255, 1)',
-    
+
   '--dark-weakest-primary': 'rgba(55, 255, 55, 1)',
   '--dark-weak-primary': 'rgba(55, 255, 55, 1)',
   '--dark-primary': 'rgba(55, 255, 55, 1)',
@@ -51,7 +51,7 @@ export default {
   '--dark-link': '#00ff00',
   '--dark-link-hover': '#00ee00',
   '--dark-link-active': '#00cc00',
-    
+
   '--gray1': '#000',
   '--gray2': '#000',
   '--gray3': '#000',
@@ -62,5 +62,5 @@ export default {
 
   '--padding': '10px 20px',
   '--vertical-padding': '10px',
-  '--horizontal-padding': '20px'
+  '--horizontal-padding': '20px',
 };

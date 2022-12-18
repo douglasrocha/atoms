@@ -3,14 +3,14 @@ import { Label } from '../Label/Label';
 import {
   extractEvents,
   getClassName,
-  getBaseStyle
+  getBaseStyle,
 } from '../../services/ComponentService';
 import './radio.css';
 import { BaseProps } from '../../base/BaseProps';
 
 export interface RadioProps extends BaseProps {
-  checked?: boolean
-  label?: React.ReactElement | string
+  checked?: boolean;
+  label?: React.ReactElement | string;
 }
 
 export const Radio = (props: RadioProps) => {
@@ -21,19 +21,18 @@ export const Radio = (props: RadioProps) => {
 
   return (
     <div
-      className={ `${baseClass}${checkedClass}` }
-      style={ getBaseStyle(style) }
-      { ...events }>
-
+      className={`${baseClass}${checkedClass}`}
+      style={getBaseStyle(style)}
+      {...events}
+    >
       <TickBox />
-      <Label
-        className="label"
-        label={ label } />
+      <Label className="label" label={label} />
     </div>
   );
 };
 
-const TickBox = () =>
+const TickBox = () => (
   <div className="box">
     <div className="tick" />
-  </div>;
+  </div>
+);

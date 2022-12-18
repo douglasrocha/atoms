@@ -3,12 +3,12 @@ import { BaseProps } from '../../base/BaseProps';
 import {
   extractEvents,
   getClassName,
-  getBaseStyle
+  getBaseStyle,
 } from '../../services/ComponentService';
 import './paragraph.css';
 
 export interface ParagraphProps extends BaseProps {
-  children?: React.ReactElement | string
+  children?: React.ReactElement | string;
 }
 
 export const Paragraph = (props: ParagraphProps) => {
@@ -17,10 +17,11 @@ export const Paragraph = (props: ParagraphProps) => {
 
   return (
     <p
-      className={ getClassName('at-paragraph', className, darkMode) }
-      style={ getBaseStyle(style) }
-      { ...events }>
-      { children }
+      className={getClassName('at-paragraph', className, darkMode)}
+      style={getBaseStyle(style)}
+      {...events}
+    >
+      {children}
     </p>
   );
 };

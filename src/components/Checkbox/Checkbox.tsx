@@ -3,17 +3,17 @@ import { Label } from '../Label/Label';
 import {
   extractEvents,
   getClassName,
-  getBaseStyle
+  getBaseStyle,
 } from '../../services/ComponentService';
 import './checkbox.css';
 import { BaseProps } from '../../base/BaseProps';
 
 export interface CheckboxProps extends BaseProps {
-  checked?: boolean
-  className?: string
-  darkMode?: boolean
-  label?: string
-  style?: React.CSSProperties
+  checked?: boolean;
+  className?: string;
+  darkMode?: boolean;
+  label?: string;
+  style?: React.CSSProperties;
 }
 
 export const Checkbox = (props: CheckboxProps): React.ReactElement => {
@@ -24,17 +24,18 @@ export const Checkbox = (props: CheckboxProps): React.ReactElement => {
 
   return (
     <div
-      className={ `${baseClass}${checkedClass}` }
-      style={ getBaseStyle(style) }
-      { ...events }>
-
+      className={`${baseClass}${checkedClass}`}
+      style={getBaseStyle(style)}
+      {...events}
+    >
       <TickBox />
-      <Label className="label" label={ label } />
+      <Label className="label" label={label} />
     </div>
   );
 };
 
-const TickBox = (): React.ReactElement =>
+const TickBox = (): React.ReactElement => (
   <div className="box">
     <div className="tick" />
-  </div>;
+  </div>
+);

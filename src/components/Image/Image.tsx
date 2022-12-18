@@ -3,16 +3,16 @@ import { BaseProps } from '../../base/BaseProps';
 import {
   extractEvents,
   getClassName,
-  getBaseStyle
+  getBaseStyle,
 } from '../../services/ComponentService';
 import './image.css';
 
-export type ImageFilterType = 'Sepia' | 'BlackAndWhite' | 'Blur'
+export type ImageFilterType = 'Sepia' | 'BlackAndWhite' | 'Blur';
 
 export interface ImageProps extends BaseProps {
-  filterType?: ImageFilterType
-  src?: string
-  tooltip?: string
+  filterType?: ImageFilterType;
+  src?: string;
+  tooltip?: string;
 }
 
 export const Image = (props: ImageProps) => {
@@ -23,20 +23,26 @@ export const Image = (props: ImageProps) => {
 
   return (
     <img
-      className={ `${baseClass}${filterClass}` }
-      style={ getBaseStyle(style) }
-      src={ src }
-      alt={ tooltip }
-      data-tooltip={ tooltip }
-      { ...events } />
+      className={`${baseClass}${filterClass}`}
+      style={getBaseStyle(style)}
+      src={src}
+      alt={tooltip}
+      data-tooltip={tooltip}
+      {...events}
+    />
   );
 };
 
-const getFilterClass = (filterType?: ImageFilterType) =>
-  filterType === undefined
-    ? ''
-    : {
+const getFilterClass = (filterType?: ImageFilterType) => {
+  if (filterType === undefined) {
+    return '';
+  }
+
+  return (
+    {
       Sepia: ' is-sepia',
       BlackAndWhite: ' is-bw',
-      Blur: ' is-blurred'
-    }[filterType] || '';
+      Blur: ' is-blurred',
+    }[filterType] || ''
+  );
+};

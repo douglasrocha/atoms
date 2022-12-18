@@ -8,39 +8,40 @@ export default {
   argTypes: {
     onClick: { action: 'click' },
     onDoubleClick: { action: 'doubleclick' },
-    onMouseOver: { action: 'mouse over' }
+    onMouseOver: { action: 'mouse over' },
   },
   parameters: {
     actions: {
-      handles: ['mouseover', 'click']
-    }
-  }
+      handles: ['mouseover', 'click'],
+    },
+  },
 };
 
-const defaultHeading = (w: HeadingWeight, darkMode: boolean) =>
+const defaultHeading = (w: HeadingWeight, darkMode: boolean) => (
   <Heading
-    w={ w }
-    darkMode={ darkMode }
-    onClick={ action(`Click ${w}`) }
-    onDoubleClick={ action(`Double Click ${w}`) }
-    onMouseOver={ action(`Mouse Over ${w}`) }>
-      This is a heading!
-  </Heading>;
+    w={w}
+    darkMode={darkMode}
+    onClick={action(`Click ${w}`)}
+    onDoubleClick={action(`Double Click ${w}`)}
+    onMouseOver={action(`Mouse Over ${w}`)}
+  >
+    This is a heading!
+  </Heading>
+);
 
 const someHeadings = (darkMode: boolean) => (
   <div>
-    { defaultHeading(1, darkMode) }
-    { defaultHeading(2, darkMode) }
-    { defaultHeading(3, darkMode) }
-    { defaultHeading(4, darkMode) }
-    { defaultHeading(5, darkMode) }
-    { defaultHeading(6, darkMode) }
+    {defaultHeading(1, darkMode)}
+    {defaultHeading(2, darkMode)}
+    {defaultHeading(3, darkMode)}
+    {defaultHeading(4, darkMode)}
+    {defaultHeading(5, darkMode)}
+    {defaultHeading(6, darkMode)}
   </div>
 );
-
 export const DefaultHeading = () => someHeadings(false);
 export const DefaultDarkHeading = () => someHeadings(true);
 
 DefaultDarkHeading.story = {
-  name: 'Default Heading (Dark Mode)'
+  name: 'Default Heading (Dark Mode)',
 };
