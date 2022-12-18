@@ -1,4 +1,5 @@
-import React from 'react';
+import * as React from 'react';
+import { BaseProps } from '../../base/BaseProps';
 import {
     extractEvents,
     getClassName,
@@ -6,7 +7,15 @@ import {
 } from '../../utils/ComponentUtils';
 import './heading.css';
 
-export default (props) => {
+export type HeadingWeight = 1|2|3|4|5|6;
+
+export interface HeadingProps extends BaseProps {
+    children?: React.ReactElement | string,
+    className?: string,
+    w?: HeadingWeight
+}
+
+export const Heading = (props: HeadingProps) => {
     const { children, className, darkMode, style, w } = props;
     const events = extractEvents(props);
     const attributes = {

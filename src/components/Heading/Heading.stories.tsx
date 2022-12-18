@@ -1,13 +1,23 @@
-import React from 'react';
-import Heading from './Heading';
+import * as React from 'react';
+import { Heading, HeadingWeight } from './Heading';
 import { action }from '@storybook/addon-actions';
 
 export default {
     title: 'Heading',
-    Component: Heading
+    Component: Heading,
+    argTypes: { 
+        onClick: { action: 'click' },
+        onDoubleClick: { action: 'doubleclick' },
+        onMouseOver: { action: 'mouse over' }
+      },
+      parameters: {
+        actions: {
+          handles: ['mouseover', 'click'],
+        },
+      },
 };
 
-const defaultHeading = (w, darkMode) =>
+const defaultHeading = (w: HeadingWeight, darkMode: boolean) =>
       <Heading
         w={ w }
         darkMode={ darkMode }
@@ -16,7 +26,7 @@ const defaultHeading = (w, darkMode) =>
         onMouseOver={ action(`Mouse Over ${w}`) }
         children="This is a heading!" />;
 
-const SomeHeadings = (darkMode) => (
+const someHeadings = (darkMode: boolean) => (
     <div>
       { defaultHeading(1, darkMode) }
       { defaultHeading(2, darkMode) }
@@ -27,11 +37,8 @@ const SomeHeadings = (darkMode) => (
     </div>
 );
 
-export const DefaultHeading = () =>
-    <SomeHeadings darkMode={ false } />;
-
-export const DefaultDarkHeading = () =>
-    <SomeHeadings darkMode={ true } />;
+export const DefaultHeading = () => someHeadings(false);
+export const DefaultDarkHeading = () => someHeadings(true);
 
 DefaultDarkHeading.story = {
     name: 'Default Heading (Dark Mode)'

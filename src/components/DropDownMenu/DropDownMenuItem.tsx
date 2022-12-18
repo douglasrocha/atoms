@@ -8,7 +8,7 @@ import {
 import { Label } from '../Label/Label';
 import './dropDownMenuItem.css';
 
-interface DropDownMenuItemProps extends BaseProps {
+export interface DropDownMenuItemProps extends BaseProps {
     className?: string,
     darkMode?: boolean,
     label?: string,

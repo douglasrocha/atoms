@@ -9,7 +9,7 @@ import {
 import './dropDownMenu.css';
 import { BaseProps } from '../../base/BaseProps';
 
-interface DropDownMenuProps extends BaseProps  {
+export interface DropDownMenuProps extends BaseProps  {
   children?: React.ReactElement,
   className?: string,
   darkMode?: boolean,
