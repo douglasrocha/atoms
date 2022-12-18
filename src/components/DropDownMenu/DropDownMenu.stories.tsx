@@ -1,24 +1,34 @@
-import React from 'react';
-import DropDownMenu from './DropDownMenu';
-import DropDownMenuItem from './DropDownMenuItem';
+import * as React from 'react';
+import { DropDownMenu } from './DropDownMenu';
+import { DropDownMenuItem } from './DropDownMenuItem';
 import { action }from '@storybook/addon-actions';
 
 export default {
     title: 'DropDownMenu',
-    Component: DropDownMenu
+    Component: DropDownMenu,
+    argTypes: { 
+      onClick: { action: 'click' },
+      onDoubleClick: { action: 'doubleclick' },
+      onMouseOver: { action: 'mouse over' }
+    },
+    parameters: {
+      actions: {
+        handles: ['mouseover', 'click'],
+      },
+    },
 };
 
-const dropDownMenuItem = (idx) =>
+const dropDownMenuItem = (idx: number) =>
       <DropDownMenuItem
         key={ idx }
-        children={ `Item ${idx}` }/>;
+        label={ `Item ${idx}` }/>;
 
 const ManyItems = () =>
       <React.Fragment>
         { [...Array(20).keys()].map(idx => dropDownMenuItem(idx)) }
       </React.Fragment>;
 
-const defaultDropDownMenu = (darkMode) =>
+const defaultDropDownMenu = (darkMode: boolean) =>
       <DropDownMenu
         darkMode={ darkMode }
         onDoubleClick={ action("Double Click") }

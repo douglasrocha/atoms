@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SyntheticEventsProps } from '../../base/SyntheticEventsBase';
+import { BaseProps } from '../../base/BaseProps';
 import {
     extractEvents,
     getClassName,
@@ -7,7 +7,7 @@ import {
 } from '../../utils/ComponentUtils';
 import './card.css';
 
-export interface CardProps extends SyntheticEventsProps {
+export interface CardProps extends BaseProps {
     children?: React.ReactElement[],
     className? : string,
     darkMode?: boolean,

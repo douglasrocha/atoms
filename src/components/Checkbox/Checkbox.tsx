@@ -6,9 +6,9 @@ import {
     getBaseStyle
 } from '../../utils/ComponentUtils';
 import './checkbox.css';
-import { SyntheticEventsProps } from '../../base/SyntheticEventsBase';
+import { BaseProps } from '../../base/BaseProps';
 
-export interface CheckboxProps extends SyntheticEventsProps {
+export interface CheckboxProps extends BaseProps {
   checked?: boolean,
   className?: string,
   darkMode?: boolean,
