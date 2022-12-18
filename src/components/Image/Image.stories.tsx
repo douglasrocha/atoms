@@ -1,5 +1,5 @@
-import React from 'react';
-import Image from './Image';
+import * as React from 'react';
+import { Image } from './Image';
 import { action }from '@storybook/addon-actions';
 
 export default {
@@ -27,21 +27,21 @@ export const Filters = () => (
         onClick={ action("Click") }
         onDoubleClick={ action("Double Click") }
         onMouseOver={ action("Mouse Over") }
-        filter="b&w"
+        filterType="BlackAndWhite"
         src="https://placekitten.com/300/300" />
 
       <Image
         onClick={ action("Click") }
         onDoubleClick={ action("Double Click") }
         onMouseOver={ action("Mouse Over") }
-        filter="sepia"
+        filterType="Sepia"
         src="https://placekitten.com/300/300" />
 
       <Image
         onClick={ action("Click") }
         onDoubleClick={ action("Double Click") }
         onMouseOver={ action("Mouse Over") }
-        filter="blur"
+        filterType="Blur"
         src="https://placekitten.com/300/300" />
     </div>
 );
