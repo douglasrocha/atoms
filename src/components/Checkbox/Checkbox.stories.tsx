@@ -1,30 +1,29 @@
 import * as React from 'react';
 import { Checkbox } from './Checkbox';
-import { action }from '@storybook/addon-actions';
 
 export default {
   title: 'Checkbox',
   Component: Checkbox,
-  argTypes: { 
+  argTypes: {
     onClick: { action: 'click' },
     onDoubleClick: { action: 'doubleclick' },
     onMouseOver: { action: 'mouse over' }
   },
   parameters: {
     actions: {
-      handles: ['mouseover', 'click'],
-    },
-  },
+      handles: ['mouseover', 'click']
+    }
+  }
 };
 
-const defaultCheckbox = (checked: boolean, darkMode: boolean, optionNumber: number) =>
+const defaultCheckbox = (checked: boolean, darkMode: boolean, optionNumber: number): React.ReactElement =>
   <Checkbox
-    style={{ margin: "10px 0" }}
+    style={{ margin: '10px 0' }}
     checked={ checked }
     darkMode={ darkMode }
     label={ `Option ${optionNumber}` } />;
 
-const someDefaultCheckboxes = (darkMode: boolean) =>
+const someDefaultCheckboxes = (darkMode: boolean): React.ReactElement =>
   <div>
     { defaultCheckbox(false, darkMode, 1) }
     { defaultCheckbox(true, darkMode, 2) }
@@ -32,9 +31,9 @@ const someDefaultCheckboxes = (darkMode: boolean) =>
     { defaultCheckbox(false, darkMode, 4) }
   </div>;
 
-export const DefaultCheckbox = () => someDefaultCheckboxes(false);
-export const DefaultDarkCheckbox = () => someDefaultCheckboxes(true);
+export const DefaultCheckbox = (): React.ReactElement => someDefaultCheckboxes(false);
+export const DefaultDarkCheckbox = (): React.ReactElement => someDefaultCheckboxes(true);
 
 DefaultDarkCheckbox.story = {
-    name: 'Default Checkbox (Dark Mode)'
+  name: 'Default Checkbox (Dark Mode)'
 };

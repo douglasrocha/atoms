@@ -4,26 +4,27 @@ import { Button } from './Button';
 export default {
   title: 'Button',
   Component: Button,
-  argTypes: { 
+  argTypes: {
     onClick: { action: 'click' },
     onDoubleClick: { action: 'doubleclick' },
     onMouseOver: { action: 'mouse over' }
   },
   parameters: {
     actions: {
-      handles: ['mouseover', 'click'],
-    },
-  },
+      handles: ['mouseover', 'click']
+    }
+  }
 };
 
-const defaultButton = (darkMode: boolean): React.ReactElement =>
-      <Button
-        darkMode={ darkMode }
-        label="Click me!" />;
+const defaultButton = (darkMode: boolean): React.ReactElement => (
+  <Button
+    darkMode={ darkMode }
+    label="Click me!" />
+);
 
-export const DefaultButton = () => defaultButton(false);
-export const DefaultDarkButton = () => defaultButton(true);
+export const DefaultButton = (): React.ReactElement => defaultButton(false);
+export const DefaultDarkButton = (): React.ReactElement => defaultButton(true);
 
 DefaultDarkButton.story = {
-    name: 'Default Button (Dark Mode)'
+  name: 'Default Button (Dark Mode)'
 };
