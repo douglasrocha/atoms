@@ -1,4 +1,5 @@
-import React from 'react';
+import * as React from 'react';
+import { BaseProps } from '../../base/BaseProps';
 import {
     extractEvents,
     getClassName,
@@ -6,8 +7,12 @@ import {
 } from '../../utils/ComponentUtils';
 import './label.css';
 
-export const Label = (props) => {
-    const { children, className, darkMode, style } = props;
+export interface LabelProps extends BaseProps {
+    label: React.ReactElement | string
+}
+
+export const Label = (props: LabelProps) => {
+    const { label, className, darkMode, style } = props;
     const events = extractEvents(props);
 
     return (
@@ -15,7 +20,7 @@ export const Label = (props) => {
           className={ getClassName('at-label', className, darkMode) }
           style={ getBaseStyle(style) }
           { ...events }>
-          { children }
+          { label }
         </label>
     );
 }

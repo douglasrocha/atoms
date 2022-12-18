@@ -1,5 +1,5 @@
-import React from 'react';
-import Label from './Label';
+import * as React from 'react';
+import { Label } from './Label';
 import { action }from '@storybook/addon-actions';
 
 export default {
@@ -7,13 +7,13 @@ export default {
     Component: Label
 };
 
-const defaultLabel = (darkMode) =>
+const defaultLabel = (darkMode: boolean) =>
       <Label
         darkMode={ darkMode }
         onClick={ action("Click") }
         onDoubleClick={ action("Double Click") }
         onMouseOver={ action("Mouse Over") }
-        children="This is a label!" />;
+        label="This is a label!" />;
 
 export const DefaultLabel = () => defaultLabel(false);
 export const DefaultDarkLabel = () => defaultLabel(true);
