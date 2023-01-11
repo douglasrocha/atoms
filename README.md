@@ -12,9 +12,8 @@ To make developers life easier, I decided to solve this problems once and for al
 2. To decouple CSS, Themes, Skins and Colors from the components
 3. To make it easily customizable via CSS
 4. To avoid sending weird parameters such as styling. This will make coding with this library easy and won't require reading documentation every time you add a component on the screen
-5. To allow companies to customize components easily
+5. To allow companies to customize components easily, making it awesome for white-label and components creation from scratch
 6. To make it extremely lightweight
-7. To make it follow all atomic design concepts
 
 ## What is the current status of the atoms UI component library?
 Don't use it in production yet. It is in early development mode! There are still lots of work that needs to be done.
