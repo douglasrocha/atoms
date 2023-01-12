@@ -22,12 +22,6 @@ const dropDownMenuItem = (idx: number) => (
   <DropDownMenuItem key={idx} label={`Item ${idx}`} />
 );
 
-const ManyItems = () => (
-  <React.Fragment>
-    {[...Array(20).keys()].map((idx) => dropDownMenuItem(idx))}
-  </React.Fragment>
-);
-
 const defaultDropDownMenu = (darkMode: boolean) => (
   <DropDownMenu
     darkMode={darkMode}
@@ -35,7 +29,7 @@ const defaultDropDownMenu = (darkMode: boolean) => (
     onMouseOver={action('Mouse Over')}
     label="My DropDownMenu"
   >
-    <ManyItems />
+    {[...Array(20).keys()].map((idx) => dropDownMenuItem(idx))}
   </DropDownMenu>
 );
 

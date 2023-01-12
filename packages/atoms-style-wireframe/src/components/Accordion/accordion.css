@@ -1,0 +1,14 @@
+.at-accordion > .titlebar {
+  background-color: #e9e9e9;
+  padding: 10px;
+}
+
+.at-accordion > .content {
+  padding: 10px;
+  display:none;
+}
+
+.at-accordion .is-visible > .content {
+  padding: 10px;
+  display:none;
+}
