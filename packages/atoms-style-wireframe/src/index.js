@@ -12,6 +12,7 @@ import './components/Image/image.css';
 import './components/Label/label.css';
 import './components/Link/link.css';
 import './components/Pagination/pagination.css';
+import './components/Pagination/paginationButton.css';
 import './components/Paragraph/paragraph.css';
 import './components/Progress/progress.css';
 import './components/Radio/radio.css';

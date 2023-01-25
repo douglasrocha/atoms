@@ -6,10 +6,9 @@ import {
   getClassName,
   getBaseStyle,
 } from '../../services/ComponentService';
-import { BaseProps } from '../../base/BaseProps';
+import { ParentBaseProps } from '../../base/ParentBaseProps';
 
-export interface DropDownMenuProps extends BaseProps {
-  children?: React.React.ReactNode;
+export interface DropDownMenuProps extends ParentBaseProps {
   className?: string;
   darkMode?: boolean;
   label?: string;
@@ -17,7 +16,7 @@ export interface DropDownMenuProps extends BaseProps {
   style?: React.CSSProperties;
 }
 
-export const DropDownMenu = (props: DropDownMenuProps): React.ReactElement => {
+export const DropDownMenu = (props: DropDownMenuProps) => {
   const { children, className, darkMode, label, open, style } = props;
   const [isOpen, setIsOpen] = useState(false);
   const defaultClickEvent: React.MouseEventHandler = (e: React.MouseEvent) => {

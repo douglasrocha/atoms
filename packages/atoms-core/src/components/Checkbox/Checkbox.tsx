@@ -15,7 +15,7 @@ export interface CheckboxProps extends BaseProps {
   style?: React.CSSProperties;
 }
 
-export const Checkbox = (props: CheckboxProps): React.ReactElement => {
+export const Checkbox = (props: CheckboxProps) => {
   const { checked, className, darkMode, label, style } = props;
   const events = extractEvents(props);
   const baseClass = getClassName('at-checkbox', className, darkMode);
@@ -33,7 +33,7 @@ export const Checkbox = (props: CheckboxProps): React.ReactElement => {
   );
 };
 
-const TickBox = (): React.ReactElement => (
+const TickBox = () => (
   <div className="box">
     <div className="tick" />
   </div>

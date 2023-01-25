@@ -4,11 +4,10 @@ import {
   extractEvents,
   getClassName
 } from '../../services/ComponentService';
-import { BaseProps } from '../../base/BaseProps';
+import { ParentBaseProps } from '../../base/ParentBaseProps';
 import { Label } from '../Label/Label';
 
-export interface AccordionProps extends BaseProps {
-  children?: React.ReactNode,
+export interface AccordionProps extends ParentBaseProps {
   title?: string
 }
 

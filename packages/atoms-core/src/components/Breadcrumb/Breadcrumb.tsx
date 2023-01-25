@@ -3,14 +3,14 @@ import {
   extractEvents,
   getClassName
 } from '../../services/ComponentService';
-import { BaseProps } from '../../base/BaseProps';
+import { ParentBaseProps } from '../../base/ParentBaseProps';
 
-export interface BreadcrumbProps extends BaseProps {
+export interface BreadcrumbProps extends ParentBaseProps {
   
 }
 
 export const Breadcrumb = (props: BreadcrumbProps) => {
-  const { className, darkMode } = props;
+  const { children, className, darkMode } = props;
   const events = extractEvents(props);
   const baseClass = getClassName('at-breadcrumb', className, darkMode);
 
@@ -19,6 +19,7 @@ export const Breadcrumb = (props: BreadcrumbProps) => {
       className={`${baseClass}`}
       {...events}
     >
+      { children }
     </div>
   );
 };

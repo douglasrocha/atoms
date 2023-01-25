@@ -7,13 +7,13 @@ import {
 } from '../../services/ComponentService';
 
 export interface CardProps extends BaseProps {
-  children?: React.ReactElement[]
+  children?: React.ReactNode
   className?: string
   darkMode?: boolean
   style?: React.CSSProperties
 }
 
-export const Card = (props: CardProps): React.ReactElement => {
+export const Card = (props: CardProps) => {
   const { children, className, darkMode, style } = props;
   const events = extractEvents(props);
 

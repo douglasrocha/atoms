@@ -13,7 +13,7 @@ export interface ButtonProps extends BaseProps {
   style?: React.CSSProperties;
 }
 
-export const Button = (props: ButtonProps): React.ReactElement => {
+export const Button = (props: ButtonProps) => {
   const { className, darkMode, label, style } = props;
   const events = extractEvents(props);
 
