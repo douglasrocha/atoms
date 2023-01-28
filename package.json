@@ -5,9 +5,6 @@
     "packages/*"
   ],
   "version": "0.0.0",
-  "devDependencies": {
-    "lerna": "^6.4.0"
-  },
   "scripts": {
     "dep-graph": "npx nx graph"
   }

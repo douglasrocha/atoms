@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './pages/HomePage';
 import reportWebVitals from './config/reportWebVitals';
+import './index.css';
+import 'atoms-style-wireframe';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
