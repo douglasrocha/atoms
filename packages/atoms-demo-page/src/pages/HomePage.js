@@ -1,12 +1,12 @@
-import { Button, Pagination } from 'atoms-core';
 import './homePage.css';
+import { Button } from 'atoms-core'; 
 
-export const HomePage = () => {
+function App() {
   return (
-    <div className="pg-home">
-      <Pagination
-        selectedPage={ 1 } 
-        count={ 10 } />
+    <div className="App">
+      <Button label="Hello world!" />
     </div>
   );
 }
+
+export default App;
