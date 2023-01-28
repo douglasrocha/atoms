@@ -24,7 +24,9 @@ You can check the Issues section, and maybe you can help me with something :)
 The roadmap I have include:
 - [X] Revive the code I started writing back in 2020
 - [X] Migrate it to Typescript
+- [X] Migrate away from Typescript (because of babel + webpack mess)
 - [] Add all base components with almost no attributes
+- [] Add Flow Type Validations for all components
 - [] Create unit tests for all of them using Jest
 - [] Create one base style for all components
 - [] Add attributes to all components
