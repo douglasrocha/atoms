@@ -1,0 +1,21 @@
+.at-pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  user-select: none;
+}
+
+.at-pagination > .page,
+.at-pagination > .separator {
+  background-color: #e7e7e7;
+  padding: 5px;
+  border-radius: 100%;
+}
+
+.at-pagination > .page {
+  cursor: pointer;
+}
+
+.at-pagination > .page.is-selected {
+  background-color: #d0d0ff;
+}

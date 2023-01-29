@@ -18,7 +18,19 @@ const getRangeSize = (start, end) =>
   end - start + 1;
 
 const getRange =(start, rangeSize) =>
-  [...Array(rangeSize).keys()].map(page => page + start + 1);
+  [...Array(rangeSize).keys()].map(page => page + start);
+
+const getShouldShowFirstPageButton = (selectedPage) =>
+  selectedPage >= 4;
+
+const getShouldShowLastPageButton = (selectedPage, count) =>
+  selectedPage <= (count - 3);
+
+const getShouldShowStartSeparator = (selectedPage) =>
+  selectedPage > 4;
+
+const getShouldShowEndSeparator = (selectedPage, count) =>
+  selectedPage < (count - 3);
 
 export default (selectedPage, 
                 count, 
@@ -30,6 +42,14 @@ export default (selectedPage,
   const isForwardNavigationEnabled = start !== 1;
   const isBackwardNavigationEnabled = end !== count;
   const shouldShowEnds = isEndsNavigationEnabled;
+  const shouldShowFirstPageButton =
+      getShouldShowFirstPageButton(selectedPage);
+  const shouldShowLastPageButton =
+      getShouldShowLastPageButton(selectedPage, count);
+  const shouldShowStartSeparator =
+      getShouldShowStartSeparator(selectedPage);
+  const shouldShowEndSeparator =
+      getShouldShowEndSeparator(selectedPage, count);
 
   return {
     start,
@@ -39,5 +59,9 @@ export default (selectedPage,
     isBackwardNavigationEnabled,
     isForwardNavigationEnabled,
     shouldShowEnds,
+    shouldShowFirstPageButton,
+    shouldShowLastPageButton,
+    shouldShowStartSeparator,
+    shouldShowEndSeparator
   }
 };

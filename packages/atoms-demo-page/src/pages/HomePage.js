@@ -1,10 +1,15 @@
 import './homePage.css';
-import { Button } from 'atoms-core'; 
+import { 
+  Button, 
+  Pagination 
+} from 'atoms-core'; 
 
 function App() {
   return (
     <div className="App">
       <Button label="Hello world!" />
+      <Pagination
+        selectedPage={ 7 } />
     </div>
   );
 }

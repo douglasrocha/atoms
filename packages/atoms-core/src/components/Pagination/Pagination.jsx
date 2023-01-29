@@ -15,10 +15,15 @@ export default (props) => {
   const { className, count, darkMode, selectedPage, shouldShowEnds } = props;
   const events = extractEvents(props);
   const baseClass = getClassName('at-pagination', className, darkMode);
+  const nonNullPage = selectedPage ?? 1;
+  const nonNullCount = count ?? 10;
+  const nonNullShouldShowEnds = shouldShowEnds ?? false;
   const pagesMetadata = PaginationMetadata(
-    selectedPage ?? 1, 
-    count ?? 10, 
-    shouldShowEnds ?? false);
+    nonNullPage, 
+    nonNullCount, 
+    nonNullShouldShowEnds);
+
+  console.log(pagesMetadata);
 
   return (
     <div
@@ -28,36 +33,51 @@ export default (props) => {
       <PaginationButton
         value="<<"
         className={ getEndsNavigationClassName(
-          "first", 
+          "page first", 
           pagesMetadata.shouldShowEnds, 
           pagesMetadata.isBackwardNavigationEnabled) } />
         
       <PaginationButton
-        value="<"
-        className={ getSiblingNavigationClassName(
-          "previous", 
-          pagesMetadata.isBackwardNavigationEnabled) } />
-
-      <PaginationSeparator />
-
-      { pagesMetadata.range.map(page => 
+          value="<"
+          className={ getSiblingNavigationClassName(
+            "page previous", 
+            pagesMetadata.isBackwardNavigationEnabled) } />
+      
+      { pagesMetadata.shouldShowFirstPageButton ?
           <PaginationButton 
             className="page"
+            isSelected={ selectedPage === 1 }
+            value={ 1 } /> : null }
+
+      { pagesMetadata.shouldShowStartSeparator ?
+          <PaginationSeparator /> : null }
+
+      { pagesMetadata.range.map(page => 
+          <PaginationButton
+            key={ `page-${page}` } 
+            className={ getPageNavigationClassName('page', ) }
             isSelected={ page === selectedPage }  
             value={ page } />) }
 
-      <PaginationSeparator />
-      
+      { pagesMetadata.shouldShowEndSeparator ?
+          <PaginationSeparator /> : null }
+
+      { pagesMetadata.shouldShowLastPageButton ?
+          <PaginationButton 
+            className="page"
+            isSelected={ selectedPage === nonNullCount }
+            value={ nonNullCount } /> : null }
+
       <PaginationButton
         value=">"
         className={ getSiblingNavigationClassName(
-          "next", 
+          "page next", 
           pagesMetadata.isForwardNavigationEnabled) } />
 
       <PaginationButton
         value=">>"
         className={ getEndsNavigationClassName(
-          "last", 
+          "page last", 
           pagesMetadata.shouldShowEnds, 
           pagesMetadata.isForwardNavigationEnabled) } />
     </div>

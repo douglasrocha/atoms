@@ -2,13 +2,13 @@ import * as React from 'react';
 import { extractEvents, getClassName } from '../../services/ComponentService';
 
 export const PaginationButton = (props) => {
-  const { className, darkMode } = props;
+  const { className, darkMode, isSelected } = props;
   const events = extractEvents(props);
   const baseClass = getClassName('pagination-button', className, darkMode);
 
   return (
     <span 
-      className={ className ?? baseClass }
+      className={ `${className ?? baseClass} ${isSelected ? 'is-selected' : ''}` }
       {...events}>
       { props.value }
     </span>
