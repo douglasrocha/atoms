@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { Link } from './Link';
+import { Link } from '../../index';
 import { action } from '@storybook/addon-actions';
 
 export default {

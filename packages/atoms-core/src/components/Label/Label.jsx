@@ -5,7 +5,7 @@ import {
   getBaseStyle,
 } from '../../services/ComponentService';
 
-export const Label = (props) => {
+export default (props) => {
   const { label, className, darkMode, style } = props;
   const events = extractEvents(props);
 

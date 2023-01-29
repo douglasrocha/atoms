@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { Card } from './Card';
-import { Paragraph } from '../Paragraph/Paragraph';
+import { Card, Paragraph } from '../../index';
 
 export default {
   title: 'Card',

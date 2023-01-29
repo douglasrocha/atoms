@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Radio } from './Radio';
+import { Radio } from '../../index';
 import { action } from '@storybook/addon-actions';
 
 export default {

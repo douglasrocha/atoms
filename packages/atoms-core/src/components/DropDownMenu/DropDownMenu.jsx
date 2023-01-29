@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { Label } from '../Label/Label';
+import { Label } from '../../index';
 import {
   extractEvents,
   getClassName,
   getBaseStyle,
 } from '../../services/ComponentService';
 
-export const DropDownMenu = (props) => {
+export default (props) => {
   const { children, className, darkMode, label, open, style } = props;
   const [isOpen, setIsOpen] = useState(false);
   const defaultClickEvent = (e) => {

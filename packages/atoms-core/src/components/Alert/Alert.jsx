@@ -6,7 +6,7 @@ import {
 
 //type Severity = 'error' | 'warning' | 'info' | 'success'
 
-export const Alert = (props) => {
+export default (props) => {
   const { children, className, darkMode, severity, title } = props;
   const events = extractEvents(props);
   const baseClass = getClassName('at-alert', className, darkMode);

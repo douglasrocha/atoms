@@ -4,7 +4,7 @@ import {
   getClassName
 } from '../../services/ComponentService';
 
-export const Slider = (props) => {
+export default (props) => {
   const { className, darkMode } = props;
   const events = extractEvents(props);
   const baseClass = getClassName('at-slider', className, darkMode);

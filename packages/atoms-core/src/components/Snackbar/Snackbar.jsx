@@ -4,7 +4,7 @@ import {
   getClassName
 } from '../../services/ComponentService';
 
-export const Snackbar = (props) => {
+export default (props) => {
   const { className, darkMode } = props;
   const events = extractEvents(props);
   const baseClass = getClassName('at-snackbar', className, darkMode);

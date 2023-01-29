@@ -4,9 +4,9 @@ import {
   getClassName,
   getBaseStyle,
 } from '../../services/ComponentService';
-import { Label } from '../Label/Label';
+import { Label } from '../../index';
 
-export const DropDownMenuItem = (props) => {
+export default (props) => {
   const { label, className, labelClassName, darkMode, style } = props;
 
   const onClickWrapper = (e) => {

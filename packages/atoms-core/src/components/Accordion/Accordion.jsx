@@ -4,9 +4,9 @@ import {
   extractEvents,
   getClassName
 } from '../../services/ComponentService';
-import { Label } from '../Label/Label';
+import { Label } from '../../index';
 
-export const Accordion = (props) => {
+export default (props) => {
   const { children, className, darkMode, title } = props;
   const events = extractEvents(props);
   const baseClass = getClassName('at-accordion', className, darkMode);

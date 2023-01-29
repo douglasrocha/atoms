@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { DropDownMenu } from './DropDownMenu';
-import { DropDownMenuItem } from './DropDownMenuItem';
+import { DropDownMenu, DropDownMenuItem } from '../../index';
 import { action } from '@storybook/addon-actions';
 
 export default {

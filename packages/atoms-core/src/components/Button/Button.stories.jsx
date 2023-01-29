@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Button } from './Button';
-import '../../../../atoms-style-wireframe/src';
+import { Button } from '../../index';
+import 'atoms-style-wireframe';
 
 export default {
   title: 'Button',

@@ -5,7 +5,7 @@ import {
   getBaseStyle,
 } from '../../services/ComponentService';
 
-export const Paragraph = (props) => {
+export default (props) => {
   const { children, className, darkMode, style } = props;
   const events = extractEvents(props);
 

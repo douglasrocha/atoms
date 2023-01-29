@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Heading } from './Heading';
+import { Heading } from '../../index';
 import { action } from '@storybook/addon-actions';
 
 export default {

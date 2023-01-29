@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Label } from './Label';
+import { Label } from '../../index';
 import { action } from '@storybook/addon-actions';
 
 export default {

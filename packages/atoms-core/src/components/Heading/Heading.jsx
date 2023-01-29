@@ -7,7 +7,7 @@ import {
 
 // export type HeadingWeight = 1 | 2 | 3 | 4 | 5 | 6;
 
-export const Heading = (props) => {
+export default (props) => {
   const { children, className, darkMode, style, w } = props;
   const events = extractEvents(props);
   const attributes = {

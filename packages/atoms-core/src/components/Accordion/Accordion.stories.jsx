@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { Accordion } from './Accordion';
-import { Paragraph } from '../Paragraph/Paragraph';
+import { Accordion, Paragraph } from '../../index';
 
 export default {
   title: 'Accordion',

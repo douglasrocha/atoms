@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { Label } from '../Label/Label';
+import { Label } from '../../index';
 import {
   extractEvents,
   getClassName,
   getBaseStyle,
 } from '../../services/ComponentService';
 
-export const Checkbox = (props) => {
+export default (props) => {
   const { checked, className, darkMode, label, style } = props;
   const events = extractEvents(props);
   const baseClass = getClassName('at-checkbox', className, darkMode);

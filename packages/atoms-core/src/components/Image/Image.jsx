@@ -7,7 +7,7 @@ import {
 
 // export type ImageFilterType = 'Sepia' | 'BlackAndWhite' | 'Blur';
 
-export const Image = (props) => {
+export default (props) => {
   const { className, filterType, src, style, tooltip } = props;
   const events = extractEvents(props);
   const baseClass = getClassName('at-image', className);

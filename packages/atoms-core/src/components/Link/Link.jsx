@@ -7,7 +7,7 @@ import {
   getBaseStyle,
 } from '../../services/ComponentService';
 
-export const Link = (props) => {
+export default (props) => {
   const { children, className, darkMode, forceExternal, style, target, to } =
     props;
   const events = extractEvents(props);
