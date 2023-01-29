@@ -8,8 +8,9 @@ function App() {
   return (
     <div className="App">
       <Button label="Hello world!" />
-      <Pagination
-        selectedPage={ 7 } />
+      <Pagination 
+        count={ 143 }
+        selectedPage={ 143 } />
     </div>
   );
 }

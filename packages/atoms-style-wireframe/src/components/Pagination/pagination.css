@@ -19,3 +19,11 @@
 .at-pagination > .page.is-selected {
   background-color: #d0d0ff;
 }
+
+.at-pagination > .page.is-disabled {
+  background-color: #ddd;
+}
+
+.at-pagination > .page.is-invisible {
+  display: none;
+}

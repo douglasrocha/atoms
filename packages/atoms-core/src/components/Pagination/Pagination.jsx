@@ -55,7 +55,7 @@ export default (props) => {
       { pagesMetadata.range.map(page => 
           <PaginationButton
             key={ `page-${page}` } 
-            className={ getPageNavigationClassName('page', ) }
+            className="page"
             isSelected={ page === selectedPage }  
             value={ page } />) }
 

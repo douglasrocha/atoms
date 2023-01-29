@@ -39,8 +39,8 @@ export default (selectedPage,
   const end = getEndPage(selectedPage, count);
   const rangeSize = getRangeSize(start, end);
   const range = getRange(start, rangeSize);
-  const isForwardNavigationEnabled = start !== 1;
-  const isBackwardNavigationEnabled = end !== count;
+  const isForwardNavigationEnabled = selectedPage !== count;
+  const isBackwardNavigationEnabled = selectedPage !== 1;
   const shouldShowEnds = isEndsNavigationEnabled;
   const shouldShowFirstPageButton =
       getShouldShowFirstPageButton(selectedPage);
