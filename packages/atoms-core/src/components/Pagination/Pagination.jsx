@@ -23,8 +23,6 @@ export default (props) => {
     nonNullCount, 
     nonNullShouldShowEnds);
 
-  console.log(pagesMetadata);
-
   return (
     <div
       className={ `${baseClass}` }
