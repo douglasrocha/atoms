@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './pages/HomePage';
+import App from './templates/HomeTemplate';
 import reportWebVitals from './config/reportWebVitals';
 import './index.css';
 import 'atoms-style-wireframe';

@@ -1,0 +1,7 @@
+.ml-section {
+  padding: 80px 0;
+}
+
+.ml-section.is-dark-mode {
+  background-color: #121212;
+}
