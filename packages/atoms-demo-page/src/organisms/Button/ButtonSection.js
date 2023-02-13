@@ -3,7 +3,7 @@ import Section from '../../molecules/Section';
 import { Button } from 'atoms-core';
 import "./buttonSection.css";
 
-export default (props) => {
+const buttonSection = (props) => {
   return (
     <Section 
       className="org-buttonsection"
@@ -12,3 +12,5 @@ export default (props) => {
     </Section>
   );
 }
+
+export default buttonSection;

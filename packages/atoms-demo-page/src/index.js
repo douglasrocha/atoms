@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './templates/HomeTemplate';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import HomeTemplate from './templates/HomeTemplate';
 import reportWebVitals from './config/reportWebVitals';
 import './index.css';
 import 'atoms-style-wireframe';
@@ -8,7 +9,11 @@ import 'atoms-style-wireframe';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={ <HomeTemplate /> } />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

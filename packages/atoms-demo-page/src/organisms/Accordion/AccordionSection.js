@@ -3,7 +3,7 @@ import Section from '../../molecules/Section';
 import { Accordion } from 'atoms-core';
 import "./accordionSection.css";
 
-export default (props) => {
+const accordionSection = (props) => {
   return (
     <Section 
       className="org-accordionsection"
@@ -14,3 +14,5 @@ export default (props) => {
     </Section>
   );
 }
+
+export default accordionSection;

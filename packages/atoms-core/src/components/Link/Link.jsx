@@ -1,6 +1,5 @@
 import * as React from 'react';
 import * as Router from 'react-router-dom';
-import { isExternal } from '../../services/UrlService';
 import {
   extractEvents,
   getClassName,
@@ -8,7 +7,7 @@ import {
 } from '../../services/ComponentService';
 
 export default (props) => {
-  const { children, className, darkMode, forceExternal, style, target, to } =
+  const { children, className, darkMode, isExternal, style, target, to } =
     props;
   const events = extractEvents(props);
   const attributes = {
@@ -19,9 +18,9 @@ export default (props) => {
     ...events,
   };
 
-  return forceExternal === true || isExternal(to ?? '') ? (
+  return isExternal === true ? (
     <a href={to} {...attributes} />
   ) : (
-    <Router.Link to={to ?? ''} {...attributes} />
+    <Router.Link to={to ?? '#'} {...attributes} />
   );
 };

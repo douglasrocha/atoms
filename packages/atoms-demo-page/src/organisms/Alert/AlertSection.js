@@ -3,7 +3,7 @@ import Section from '../../molecules/Section';
 import { Alert } from 'atoms-core';
 import "./alertSection.css";
 
-export default (props) => {
+const alertSection = (props) => {
   return (
     <Section 
       className="org-alertsection"
@@ -17,3 +17,5 @@ export default (props) => {
     </Section>
   );
 }
+
+export default alertSection;

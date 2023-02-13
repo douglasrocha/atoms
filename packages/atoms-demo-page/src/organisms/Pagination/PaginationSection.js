@@ -3,7 +3,7 @@ import Section from '../../molecules/Section';
 import { Pagination } from 'atoms-core';
 import "./paginationSection.css";
 
-export default (props) => {
+const paginationSection =  (props) => {
   return (
     <Section 
       className="org-paginationsection"
@@ -15,3 +15,5 @@ export default (props) => {
     </Section>
   );
 }
+
+export default paginationSection;

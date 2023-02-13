@@ -1,29 +1,29 @@
 import React from 'react';
 import Section from '../../molecules/Section';
-import { Checkbox } from 'atoms-core';
-import "./checkboxSection.css";
+import { Radio } from 'atoms-core';
+import "./radioSection.css";
 
 const checkboxSection = (props) => {
   return (
     <Section 
       className="org-checkboxsection"
       darkMode={ props.darkMode }>
-      <Checkbox 
+      <Radio 
         className="item"
         darkMode={ props.darkMode }
-        label="Checkbox 1" />
-      <Checkbox 
+        label="Radio 1" />
+      <Radio 
         className="item"
         darkMode={ props.darkMode }
-        label="Checkbox 2" />
-      <Checkbox 
+        label="Radio 2" />
+      <Radio 
         className="item"
         darkMode={ props.darkMode }
-        label="Checkbox 3" />
-      <Checkbox 
+        label="Radio 3" />
+      <Radio 
         className="item"
         darkMode={ props.darkMode }
-        label="Checkbox 4" />
+        label="Radio 4" />
     </Section>
   );
 }

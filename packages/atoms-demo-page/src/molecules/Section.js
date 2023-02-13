@@ -1,10 +1,14 @@
 import React from 'react';
 import "./section.css";
 
-export default (props) => {
+const section = (props) => {
+  const overrideClass = props.className != null ? ` ${props.className}` : '';
+  const darkModeClass = props.darkMode === true ? ' is-dark-mode' : '';
   return (
-    <div className={ `ml-section${props.className != null ? ` ${props.className}` : ''}${props.darkMode === true ? ' is-dark-mode' : ''}` }>
+    <div className={ `ml-section${overrideClass}${darkModeClass}` }>
       { props.children }
     </div>
   );
 }
+
+export default section;

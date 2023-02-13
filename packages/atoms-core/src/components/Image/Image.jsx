@@ -4,6 +4,7 @@ import {
   getClassName,
   getBaseStyle,
 } from '../../services/ComponentService';
+import { getFilterClass } from './ImageUtils';
 
 // export type ImageFilterType = 'Sepia' | 'BlackAndWhite' | 'Blur';
 
@@ -22,19 +23,5 @@ export default (props) => {
       data-tooltip={tooltip}
       {...events}
     />
-  );
-};
-
-const getFilterClass = (filterType) => {
-  if (filterType === undefined) {
-    return '';
-  }
-
-  return (
-    {
-      Sepia: ' is-sepia',
-      BlackAndWhite: ' is-bw',
-      Blur: ' is-blurred',
-    }[filterType] || ''
   );
 };
