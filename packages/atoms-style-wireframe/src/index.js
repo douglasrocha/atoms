@@ -1,3 +1,4 @@
+import "./index.css";
 import './components/Accordion/accordion.css';
 import './components/Alert/alert.css';
 import './components/Breadcrumb/breadcrumb.css';

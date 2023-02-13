@@ -8,10 +8,11 @@ export default {
   Component: Link,
 };
 
-const defaultLink = (darkMode, to) => (
+const defaultLink = (darkMode, isExternal, to) => (
   <BrowserRouter>
     <Link
       darkMode={darkMode}
+      isExternal={ isExternal }
       onClick={action('Click')}
       onDoubleClick={action('Double Click')}
       onMouseOver={action('Mouse Over')}
@@ -23,9 +24,9 @@ const defaultLink = (darkMode, to) => (
   </BrowserRouter>
 );
 
-export const DefaultLink = () => defaultLink(false, '#');
-export const DefaultDarkLink = () => defaultLink(true, '#');
-export const ExternalLink = () => defaultLink(false, 'https://www.google.com');
+export const DefaultLink = () => defaultLink(false, false, '#');
+export const DefaultDarkLink = () => defaultLink(true, false, '#');
+export const ExternalLink = () => defaultLink(false, true, 'https://www.google.com');
 
 DefaultDarkLink.story = {
   name: 'Default Link (Dark Mode)',

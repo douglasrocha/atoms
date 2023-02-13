@@ -27,7 +27,7 @@ const homeTemplate = (props) => {
       <HeadingSection darkMode={ darkMode } />
       <ImageSection darkMode={ darkMode } />
       <LabelSection darkMode={ darkMode } />
-      {/* <LinkSection darkMode={ darkMode } /> */}
+      <LinkSection darkMode={ darkMode } />
       <PaginationSection darkMode={ darkMode } />
       <ParagraphSection darkMode={darkMode} />
       <RadioSection darkMode={darkMode} />

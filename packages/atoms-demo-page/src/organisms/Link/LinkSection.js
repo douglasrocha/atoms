@@ -8,12 +8,19 @@ const linkSection = (props) => {
     <Section 
       className="org-linksection"
       darkMode={ props.darkMode }>
+      {/* <Link
+        darkMode={ props.darkMode }
+        isExternal={ false }
+        to={ "#" }
+        target="_BLANK">
+        Internal Link
+      </Link> */}
       <Link
         darkMode={ props.darkMode }
-        external={ true }
-        to="https://google.com"
+        isExternal={ true }
+        to={ "https://google.com" }
         target="_BLANK">
-        This is an external link
+        External Link
       </Link>
     </Section>
   );
